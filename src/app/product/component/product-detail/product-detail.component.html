@@ -1,0 +1,42 @@
+<div class="p-grid">
+    <div class="p-col-12">
+        <div class="box">Product - สินค้า</div>
+    </div>
+</div>
+
+
+<div class="p-grid">
+
+    <div class="p-col" style="margin-bottom: 4rem;">
+        <br>
+        <p-card>
+            <ng-template pTemplate="header">
+            </ng-template>
+            <div class="p-grid">
+                <div class="p-col">
+
+                </div>
+                <div class="p-col">
+                    <img src="http://mysterious-castle-03868.herokuapp.com/{{dataProduct.product_img_path}}" width="auto" height="270px" class="product-image" />
+                </div>
+                <div class="p-col">
+
+                </div>
+            </div>
+            <div class="p-grid">
+                <div class="p-col">
+                    <p [innerHTML]="convertText(dataProduct.product_detail)"></p>
+                </div>
+            </div>
+
+
+            <ng-template pTemplate="footer">
+                จำนวนผู้เข้าชม {{dataProduct.view}} ครั้ง
+                <p-button styleClass="p-button-link "></p-button>
+                <a pButton href="product" label="ย้อนกลับ " class="p-button-raised p-button-rounded " style="right: 0; ">
+                </a>
+            </ng-template>
+        </p-card>
+    </div>
+
+</div>

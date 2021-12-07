@@ -1,0 +1,13 @@
+{
+    "/api/*": {
+        "target": "http://203.158.101.9/otops",
+        "secure": false,
+        "changeOrigin": true
+    },
+    "/training-demo/student/*": {
+        "target": "https://showcase.cdgs.co.th/",
+        "secure": false,
+        "changeOrigin": true
+    }
+
+}

@@ -1,0 +1,36 @@
+<p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+    <ng-template pTemplate="header">
+        <div class="p-grid">
+            <div class="p-col-12">
+                <div class="box">Product - สินค้า</div>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template let-product pTemplate="item">
+        <div class="product-item">
+            <div class="product-item-content">
+                <div class="p-mb-3">
+                    <img src="http://mysterious-castle-03868.herokuapp.com/{{product.product_img_path}}" width="auto" height="270px" [alt]="product.name" class="product-image" />
+                </div>
+                <div>
+                    <h4 class="p-mb-1">{{product.product_title}}</h4>
+                    <!-- <h6 class="p-mt-0 p-mb-3">${{product.price}}</h6> -->
+                    <!-- <span [class]="'product-badge status-'">{{product.inventoryStatus}}</span> -->
+                    <div class="car-buttons p-mt-5">
+                        <div class="p-grid">
+                            <div class="p-col">
+                            </div>
+                            <p-button type="button" styleClass="p-button p-button-rounded " (click)="gotopage(product.id)" icon="pi pi-search"></p-button>
+                            <div class="p-col"><b style="padding-bottom: 30px;">ดูข้อมูลเพิ่มเติม</b></div>
+                            <div class="p-col"></div>
+                        </div>
+
+
+                        <!-- <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
+                    <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

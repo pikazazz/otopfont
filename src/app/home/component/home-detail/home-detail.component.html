@@ -1,0 +1,29 @@
+<div class="p-grid">
+    <div class="p-col-12">
+        <div class="box">Product - สินค้า</div>
+    </div>
+</div>
+
+
+<div class="p-grid">
+
+    <div class="p-col" style="margin-bottom: 4rem;">
+        <br>
+        <p-card>
+            <ng-template pTemplate="header">
+
+                <b style="padding: 1rem;">{{dataNews.id}}</b>
+
+            </ng-template>
+            <div [innerHTML]="convertText(dataNews.news_detail)"></div>
+            <ng-template pTemplate="footer">
+                จำนวนผู้เข้าชม ครั้ง
+                <p-button styleClass="p-button-link "></p-button>
+
+                <a pButton href="home/{{dataNews.id}}" label="อ่านเพิ่มเติมคลิ๊ก " class="p-button-raised p-button-rounded " style="right: 0; ">
+                </a>
+            </ng-template>
+        </p-card>
+    </div>
+
+</div>
